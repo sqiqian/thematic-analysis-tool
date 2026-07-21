@@ -1,0 +1,92 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --color-surface: #fafafa;
+  --color-panel: #f4f4f5;
+  --color-border: #e4e4e7;
+  --color-muted: #71717a;
+  --color-ink: #18181b;
+  --color-accent: #52525b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--color-surface);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* TipTap editor */
+.ProseMirror {
+  outline: none;
+  min-height: 320px;
+}
+
+.ProseMirror p {
+  margin: 0 0 1em;
+}
+
+.ProseMirror h1,
+.ProseMirror h2,
+.ProseMirror h3 {
+  font-weight: 500;
+  margin: 1.25em 0 0.5em;
+}
+
+.ProseMirror ul,
+.ProseMirror ol {
+  padding-left: 1.5em;
+  margin: 0 0 1em;
+}
+
+.ProseMirror blockquote {
+  border-left: 3px solid var(--color-border);
+  margin: 0 0 1em;
+  padding-left: 1em;
+  color: var(--color-muted);
+}
+
+.ProseMirror strong {
+  font-weight: 600;
+}
+
+.ProseMirror em {
+  font-style: italic;
+}
+
+.qda-highlight {
+  border-radius: 2px;
+  transition: filter 0.15s, background 0.15s;
+}
+
+.qda-highlight:hover {
+  filter: brightness(0.92);
+  outline: 1px solid rgba(63, 63, 70, 0.25);
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d4d4d8;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
